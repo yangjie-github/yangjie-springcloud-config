@@ -1,0 +1,16 @@
+#注意保存编码一定要是utf-8
+spring:
+  profiles:
+    active:
+      - dev
+
+---
+spring:
+  profiles: dev
+  application:
+    name: yangjie-springcloud-config-dev
+---
+spring:
+  profiles: test
+  application:
+    name: yangjie-springcloud-config-test
