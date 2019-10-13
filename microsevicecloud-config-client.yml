@@ -1,0 +1,28 @@
+﻿#注意保存编码一定要是utf-8
+spring:
+  profiles:
+    active:
+      - dev
+
+---
+server:
+  port: 8601
+spring:
+  profiles: dev
+  application:
+    name: microsevicecloud-config-client
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka8801.com:8801/eureka/,http://eureka8802.com:8802/eureka/
+---
+server:
+  port: 8602
+spring:
+  profiles: test
+  application:
+    name: microsevicecloud-config-client
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka8801.com:8801/eureka/,http://eureka8802.com:8802/eureka/
